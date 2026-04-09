@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact and Appointment | BLP YASHODA Hospital and Research Centre</title>
+    <meta
+      name="description"
+      content="Contact BLP YASHODA Hospital and Research Centre for appointments, emergency support, working hours, and hospital location in Gonda, Uttar Pradesh."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header site-header-inner">
+      <div class="topbar">
+        <p>Appointments, patient support, and location access</p>
+        <div class="topbar-links">
+          <a href="tel:+918808456820">Call: +91 8808456820</a>
+          <a href="mailto:pandeymayank9219@gmail.com">pandeymayank9219@gmail.com</a>
+        </div>
+      </div>
+      <nav class="navbar">
+        <a href="index.html" class="brand" aria-label="BLP YASHODA home">
+          <span class="brand-icon" aria-hidden="true">+</span>
+          <span>
+            <strong>BLP YASHODA</strong>
+            <small>Hospital and Research Centre</small>
+          </span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+          Menu
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <section class="inner-hero section">
+        <div class="inner-hero-copy reveal">
+          <p class="eyebrow">Contact Us</p>
+          <h1>Book appointments, reach emergency support, and locate our branches.</h1>
+          <p>
+            Use the appointment form for consultation requests or contact the hospital directly for urgent guidance.
+          </p>
+        </div>
+      </section>
+    </header>
+
+    <main id="main-content">
+      <section class="section contact-page-grid">
+        <div class="appointment-panel reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Appointment Form</p>
+            <h2>Book a consultation with the hospital.</h2>
+          </div>
+          <form class="appointment-form" id="appointmentForm" novalidate>
+            <div class="form-grid">
+              <label>
+                Full Name
+                <input type="text" id="name" name="name" placeholder="Enter patient name" required />
+              </label>
+              <label>
+                Phone Number
+                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required />
+              </label>
+              <label>
+                Email Address
+                <input type="email" id="email" name="email" placeholder="Enter email address" required />
+              </label>
+              <label>
+                Department
+                <select id="department" name="department" required>
+                  <option value="">Select department</option>
+                  <option value="General Consultation">General Consultation</option>
+                  <option value="Diabetes Care">Diabetes Care</option>
+                  <option value="Neuro Spine and Joint Care">Neuro Spine and Joint Care</option>
+                  <option value="Emergency Support">Emergency Support</option>
+                </select>
+              </label>
+              <label>
+                Preferred Date
+                <input type="date" id="date" name="date" required />
+              </label>
+              <label class="form-full">
+                Message
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Describe the patient concern or appointment request"
+                  required
+                ></textarea>
+              </label>
+            </div>
+            <button type="submit" class="button button-primary full-width">Submit Appointment Request</button>
+            <p class="form-message" id="formMessage" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="contact-panel reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Contact Details</p>
+            <h2>Hospital information at a glance.</h2>
+          </div>
+          <ul class="contact-list">
+            <li><strong>Phone:</strong> <a href="tel:+918808456820">+91 8808456820</a></li>
+            <li>
+              <strong>Email:</strong>
+              <a href="mailto:pandeymayank9219@gmail.com">pandeymayank9219@gmail.com</a>
+            </li>
+            <li><strong>Address:</strong> Gonda, Uttar Pradesh</li>
+            <li><strong>Working Hours:</strong> Monday to Sunday, 8:00 AM to 8:00 PM</li>
+            <li><strong>Branches:</strong> Gonda, Khargupur, Aili Parsauli, Ramganj Bazar</li>
+          </ul>
+          <div class="emergency-box">
+            <p class="eyebrow">Emergency Support</p>
+            <h3>Need urgent medical guidance?</h3>
+            <p>Call the hospital directly for emergency support and patient coordination.</p>
+            <a class="button button-secondary alt-outline" href="tel:+918808456820">Call Emergency Line</a>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section map-and-contact">
+        <div class="map-card reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Google Map</p>
+            <h2>Hospital location and area access.</h2>
+          </div>
+          <iframe
+            title="BLP YASHODA Hospital Google map"
+            src="https://www.google.com/maps?q=Gonda%20Uttar%20Pradesh&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div class="branch-panel reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Branch Locations</p>
+            <h2>Our healthcare presence across the district.</h2>
+          </div>
+          <div class="branch-grid">
+            <article class="branch-card">
+              <h3>BLP YASHODA Hospital and Research Centre</h3>
+              <p>Gonda, Uttar Pradesh</p>
+            </article>
+            <article class="branch-card">
+              <h3>BLP YASHODA Medical Centre</h3>
+              <p>Khargupur, Gonda, Uttar Pradesh</p>
+            </article>
+            <article class="branch-card">
+              <h3>BLP YASHODA Medical Centre</h3>
+              <p>Aili Parsauli, Ramganj Bazar, Gonda, Uttar Pradesh</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <section>
+          <h2>BLP YASHODA Hospital and Research Centre</h2>
+          <p>Appointments, emergency response, and branch-level support for families across Gonda.</p>
+        </section>
+        <section>
+          <h2>Quick Links</h2>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="doctors.html">Doctors</a>
+        </section>
+        <section>
+          <h2>Working Hours</h2>
+          <p>Monday to Sunday</p>
+          <p>8:00 AM to 8:00 PM</p>
+          <p>Emergency support available</p>
+        </section>
+      </div>
+      <p class="footer-note">© 2026 BLP YASHODA Hospital and Research Centre. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
