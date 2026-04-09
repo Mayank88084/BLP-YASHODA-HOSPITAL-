@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,6 +10,35 @@
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+.form-loading{
+color:blue;
+}
+
+.form-success{
+color:green;
+font-weight:bold;
+}
+
+.form-error{
+color:red;
+font-weight:bold;
+}
+
+.whatsapp-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 20px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
+
+</style>
 
 </head>
 
@@ -26,6 +56,8 @@
 
 <form id="appointmentForm">
 
+<input type="text" name="botcheck" style="display:none">
+
 <label>Full Name</label>
 <input type="text" name="name" required>
 
@@ -37,11 +69,14 @@
 
 <label>Department</label>
 <select name="department" required>
+
 <option value="">Select Department</option>
+
 <option>General Consultation</option>
 <option>Diabetes Care</option>
 <option>Neuro Spine and Joint Care</option>
 <option>Emergency Support</option>
+
 </select>
 
 <label>Preferred Date</label>
@@ -56,6 +91,15 @@
 
 </form>
 
+<a
+class="whatsapp-btn"
+href="https://wa.me/918808456820"
+target="_blank">
+
+Book Appointment on WhatsApp
+
+</a>
+
 </section>
 
 
@@ -64,7 +108,9 @@
 <h2>Hospital Contact Details</h2>
 
 <p>Phone: +91 8808456820</p>
+
 <p>Email: pandeymayank9918@gmail.com</p>
+
 <p>Address: Gonda, Uttar Pradesh</p>
 
 </section>
@@ -75,22 +121,28 @@
 <h2>Hospital Location</h2>
 
 <iframe
+
 src="https://www.google.com/maps?q=Gonda%20Uttar%20Pradesh&output=embed"
+
 width="100%"
+
 height="300"
+
 style="border:0;">
+
 </iframe>
 
 </section>
 
 </main>
 
+
 <footer>
+
 <p>© 2026 BLP YASHODA Hospital and Research Centre</p>
+
 </footer>
 
-
-<!-- EmailJS Script -->
 
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
@@ -100,23 +152,49 @@ window.onload = function(){
 
 emailjs.init("_wCkOBOWkRnWlvU8B");
 
-document.getElementById("appointmentForm").addEventListener("submit", function(event){
+document.getElementById("appointmentForm")
+
+.addEventListener("submit", function(event){
 
 event.preventDefault();
 
+const messageBox = document.getElementById("formMessage");
+
+messageBox.className="form-loading";
+
+messageBox.innerText="Sending appointment request...";
+
+if(this.botcheck.value !== ""){
+
+return;
+
+}
+
 emailjs.sendForm(
+
 "service_rtsqa4w",
+
 "template_1h5o9nv",
+
 this
-).then(function(){
 
-document.getElementById("formMessage").innerText =
-"Appointment request sent successfully.";
+)
 
-}, function(error){
+.then(function(){
 
-document.getElementById("formMessage").innerText =
-"Failed to send appointment request.";
+messageBox.className="form-success";
+
+messageBox.innerText="Appointment request sent successfully!";
+
+document.getElementById("appointmentForm").reset();
+
+},
+
+function(error){
+
+messageBox.className="form-error";
+
+messageBox.innerText="Failed to send appointment request.";
 
 });
 
@@ -127,4 +205,5 @@ document.getElementById("formMessage").innerText =
 </script>
 
 </body>
+
 </html>
